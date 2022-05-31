@@ -1,8 +1,8 @@
 canvas = document.getElementById("myCanvas");
 ctx = canvas.getContext("2d");
 
-rover_width = 150;
-rover_height = 90;
+rover_width = 75;
+rover_height = 60;
 rover_x = 10;
 rover_y = 10;
 
@@ -67,6 +67,7 @@ function up()
 		console.log("when up arrow is pressed, x="+rover_x+"| y="+rover_y);
 		uploadBackground();
 		uploadrover();
+        test();
 	}
 
 }
@@ -78,6 +79,7 @@ function down()
 		console.log("when down arrow is pressed, x="+rover_x+"| y="+rover_y);
 		uploadBackground();
 		uploadrover();
+        test();
 	}
 }
 
@@ -88,6 +90,7 @@ function left()
 		console.log("when left arrow is pressed, x="+rover_x+"| y="+rover_y);
 		uploadBackground();
 		uploadrover();
+        test();
 	}
 }
 
@@ -98,5 +101,14 @@ function right()
 		console.log("when right arrow is pressed, x="+rover_x+"| y="+rover_y);
 		uploadBackground();
 		uploadrover();
+        test();
 	}
+}
+
+function test()
+{
+    if(rover_x == 90 && rover_y >= 320 && rover_y <= 390){
+        console.log("Hurdle");
+        document.getElementById('hurdle').innerHTML = 'HURDLE!';
+    }
 }
